@@ -40,4 +40,18 @@
      padding-bottom: 10px;
      padding-top: 10px;
 }
- 
+
+#map {
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+}
+
+article {
+    height: 500px;
+}
+h2 {
+    font-size: 3rem;
+    background-color: Brown;
+
+}

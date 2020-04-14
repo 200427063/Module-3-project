@@ -74,3 +74,44 @@ function A1Function() {
 function A2Function() {
     document.getElementById("h4").innerHTML = 'The ' + place2.name + ' Hotel is ' + place2.availability + ' for renting';
 }
+
+
+
+function initMap() {
+
+    //adding 2 different address for marking
+
+    let address = [
+        ['Chelsea Hotel', 43.6584976, -79.385286, 2],
+        ['Delux Inn Hotel', 43.618651, -79.5415533, 1],
+
+    ];
+
+    let section = document.querySelector('section');
+
+
+    let map = new google.maps.Map(section, {
+        zoom: 10,
+        center: {
+            lat: 43.7181557,
+            lng: -79.5181428
+        }
+    });
+
+    // Add markers to map
+
+    for (let i = 0; i < address.length; i++) {
+        let mark = address[i];
+        let marker = new google.maps.Marker({
+            position: {
+                lat: mark[1],
+                lng: mark[2]
+            },
+            map: map,
+            title: mark[0],
+            animation: google.maps.Animation.DROP
+        });
+
+    }
+
+}
